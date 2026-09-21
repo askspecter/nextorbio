@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Logo } from "./Logo";
+import { SignIn } from "./SignIn";
 import { navLinks } from "@/lib/data";
 
 export function Navbar() {
@@ -37,12 +38,7 @@ export function Navbar() {
         </div>
 
         <div className="hidden items-center gap-4 md:flex">
-          <a
-            href="#usage"
-            className="text-sm text-ink-muted transition-colors hover:text-ink"
-          >
-            Sign in
-          </a>
+          <SignIn variant="desktop" />
           <a
             href="#api"
             className="rounded-full bg-white px-4 py-2 text-sm font-medium text-black transition-opacity hover:opacity-90"
@@ -91,6 +87,9 @@ export function Navbar() {
                 {link.label}
               </a>
             ))}
+            <div className="mt-1 border-t border-white/[0.06] pt-2">
+              <SignIn variant="mobile" />
+            </div>
             <a
               href="#api"
               onClick={() => setOpen(false)}

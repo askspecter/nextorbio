@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://halva.so"),
@@ -34,7 +35,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="grain font-sans antialiased">
         <div className="site-bg" aria-hidden="true" />
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
