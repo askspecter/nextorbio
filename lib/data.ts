@@ -1,95 +1,92 @@
-// Static data that powers the Halva landing page.
-// Numbers are illustrative of the product's marketplace mechanics.
+// Static data behind the Halva marketing site.
+// Halva is a unified AI gateway: one API, many models, wholesale pricing.
+// Numbers are illustrative of the product mechanics.
 
-export type Tier = {
+export type Band = {
   label: string;
-  discount: number; // percentage off, e.g. 10 => 10%
-  available: number; // credits available at this tier, in USD (1 CREDIT = $1)
+  discount: number; // % below list at this volume band
+  available: number; // monthly USD of usage priced at this band
 };
 
-// The "liquidity book" — discounted CREDIT inventory listed by sellers and
-// $HALVA stakers. Buyers fill against the deepest discount first.
-export const tiers: Tier[] = [
-  { label: "Tier A", discount: 90, available: 900 },
-  { label: "Tier B", discount: 60, available: 6400 },
-  { label: "Tier C", discount: 30, available: 24000 },
-  { label: "Tier D", discount: 10, available: 999999 },
+// Volume pricing bands. The blended rate improves as usage grows — the router
+// prices each request across bands, best rate first.
+export const bands: Band[] = [
+  { label: "Scale", discount: 45, available: 2000 },
+  { label: "Growth", discount: 30, available: 8000 },
+  { label: "Team", discount: 18, available: 30000 },
+  { label: "Base", discount: 8, available: 999999 },
 ];
 
 export type ModelPrice = {
   model: string;
   vendor: "Anthropic" | "OpenAI" | "Google" | "xAI";
-  list: number; // $ per 1M output tokens
-  halva: number; // $ per 1M output tokens paid through Halva credit
+  list: number; // $ per 1M output tokens (list)
+  halva: number; // $ per 1M output tokens (blended Halva rate)
 };
 
 export const modelPrices: ModelPrice[] = [
-  { model: "Claude Fable 5.1", vendor: "Anthropic", list: 50, halva: 5 },
-  { model: "Claude Opus 5", vendor: "Anthropic", list: 75, halva: 22.5 },
-  { model: "GPT Astra", vendor: "OpenAI", list: 40, halva: 6 },
-  { model: "GPT-5 mini", vendor: "OpenAI", list: 8, halva: 2.4 },
-  { model: "Gemini 3 Pro", vendor: "Google", list: 30, halva: 6 },
-  { model: "Grok 4", vendor: "xAI", list: 25, halva: 7.5 },
+  { model: "Claude Sonnet 5", vendor: "Anthropic", list: 15, halva: 9.6 },
+  { model: "Claude Opus 5", vendor: "Anthropic", list: 75, halva: 48 },
+  { model: "GPT-5.1", vendor: "OpenAI", list: 40, halva: 26 },
+  { model: "GPT-5 mini", vendor: "OpenAI", list: 8, halva: 5.1 },
+  { model: "Gemini 3 Pro", vendor: "Google", list: 30, halva: 19.5 },
+  { model: "Grok 4", vendor: "xAI", list: 25, halva: 16.25 },
 ];
 
 export type Faq = { q: string; a: string };
 
 export const faqs: Faq[] = [
   {
-    q: "What is a CREDIT?",
-    a: "1 CREDIT = $1 of AI usage. Buy CREDIT once, then spend it across 400+ models through a single Halva key. Purchased credit becomes your API balance, drawn down as you make requests.",
+    q: "What is Halva?",
+    a: "Halva is a single API gateway to 400+ AI models. One key, one endpoint, wholesale pricing, and full visibility into every token you spend — so you can build against any model without wiring up a new provider each time.",
   },
   {
-    q: "Where does the discount come from?",
-    a: "Sellers list their unused AI credit — or the credit they earn by holding $HALVA — on an onchain order book at a discount they choose. When you buy, your order fills against the deepest discount first, so you always get the best live price. Popular models routinely land up to 90% below list.",
+    q: "How is it cheaper than going direct?",
+    a: "Halva aggregates demand and routes across providers, passing near-cost rates back to you. You pay per token at a blended market rate that improves with volume — no monthly minimum, no seat fees, no markup on top.",
   },
   {
-    q: "How do I get CREDIT?",
-    a: "Four ways: claim it, buy it on the onchain order book, swap it on Uniswap, or earn it by staking $HALVA. However you get it, activate it to power your AI through your Halva key.",
+    q: "Is it really drop-in?",
+    a: "Yes. Halva speaks the OpenAI API. Point your base URL at api.halva.so, swap in your key, and keep your existing SDK, streaming, and tool calls exactly as they are.",
   },
   {
-    q: "Do you store my prompts?",
-    a: "No. Requests relay directly to the named provider. We retain only billing metadata — model, token counts, and timestamps — never prompt or completion content.",
+    q: "Do you train on or store my data?",
+    a: "Never. Requests relay straight through to the provider you named. We keep only billing metadata — model, token counts, and timestamps — and nothing of your prompt or completion content is written to disk.",
   },
   {
-    q: "How do I switch from OpenRouter or the OpenAI SDK?",
-    a: "Change two variables: point base_url at https://api.halva.so/v1 and swap in your Halva key. Everything else — request shape, streaming, tool calls — stays identical.",
+    q: "What happens if a provider has an outage?",
+    a: "The router fails over to a healthy provider serving the same model family, so your app keeps responding instead of returning errors while one upstream is degraded.",
   },
   {
-    q: "Can I sell credit I'm not using?",
-    a: "Yes. List an OpenRouter key at a discount you choose and get paid for what buyers actually use, or sell the CREDIT you earned by holding $HALVA. Sellers manage listings at sellers.halva.so.",
+    q: "Can I cap and track spend?",
+    a: "Yes. Set per-key budgets and alerts, then watch every request, token, and dollar update live in the dashboard. Spend is broken down by model, key, and day.",
   },
-];
-
-export type Buy = {
-  wallet: string;
-  amount: number;
-  discount: number;
-  secondsAgo: number;
-};
-
-export const recentBuys: Buy[] = [
-  { wallet: "0x7a3f…c21e", amount: 250, discount: 90, secondsAgo: 12 },
-  { wallet: "0x91b0…8d4a", amount: 1200, discount: 60, secondsAgo: 47 },
-  { wallet: "0x2ce8…4f90", amount: 80, discount: 60, secondsAgo: 96 },
-  { wallet: "0xd14a…7b33", amount: 500, discount: 30, secondsAgo: 184 },
-  { wallet: "0x6f22…a0c7", amount: 3000, discount: 30, secondsAgo: 240 },
 ];
 
 export type NavLink = { label: string; href: string };
 
 export const navLinks: NavLink[] = [
-  { label: "Buy", href: "#buy" },
-  { label: "Sell", href: "#liquidity" },
+  { label: "Product", href: "#product" },
   { label: "Pricing", href: "#pricing" },
-  { label: "Protocol", href: "#migrate" },
+  { label: "Docs", href: "#api" },
+  { label: "Usage", href: "#usage" },
   { label: "FAQ", href: "#faq" },
 ];
 
-// Fill an order of `amount` USD against the liquidity book, deepest discount first.
+export const providers = [
+  "Anthropic",
+  "OpenAI",
+  "Google",
+  "Meta",
+  "Mistral",
+  "xAI",
+  "Cohere",
+  "DeepSeek",
+];
+
+// Price `amount` of monthly usage across the volume bands, best rate first.
 export function fillOrder(amount: number): {
   spent: number;
-  credits: number;
+  credits: number; // list value of usage covered
   saved: number;
   effectiveDiscount: number;
   breakdown: { discount: number; spent: number; credits: number }[];
@@ -99,11 +96,10 @@ export function fillOrder(amount: number): {
   let saved = 0;
   const breakdown: { discount: number; spent: number; credits: number }[] = [];
 
-  for (const tier of tiers) {
+  for (const band of bands) {
     if (remaining <= 0) break;
-    const factor = 1 - tier.discount / 100;
-    // Max USD spend that can be absorbed by this tier's available credit face value.
-    const maxSpendHere = tier.available * factor;
+    const factor = 1 - band.discount / 100;
+    const maxSpendHere = band.available * factor;
     const spendHere = Math.min(remaining, maxSpendHere);
     if (spendHere <= 0) continue;
     const creditsHere = spendHere / factor;
@@ -111,7 +107,7 @@ export function fillOrder(amount: number): {
     saved += creditsHere - spendHere;
     remaining -= spendHere;
     breakdown.push({
-      discount: tier.discount,
+      discount: band.discount,
       spent: spendHere,
       credits: creditsHere,
     });

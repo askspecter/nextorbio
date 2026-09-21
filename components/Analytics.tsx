@@ -11,48 +11,48 @@ const spend = [
 ];
 
 const byModel = [
-  { model: "claude-fable-5.1", pct: 46 },
-  { model: "gpt-5.1", pct: 31 },
-  { model: "gemini-3-pro", pct: 15 },
+  { model: "claude-sonnet-5", pct: 44 },
+  { model: "gpt-5.1", pct: 29 },
+  { model: "gemini-3-pro", pct: 19 },
   { model: "others", pct: 8 },
 ];
 
 const kpis = [
   { label: "Requests (7d)", value: "1.24M" },
   { label: "Tokens (7d)", value: "890M" },
-  { label: "Avg latency", value: "41 ms" },
-  { label: "Saved (7d)", value: "$3,180" },
+  { label: "Routing overhead", value: "39 ms" },
+  { label: "Kept vs list", value: "$3,180" },
 ];
 
 export function Analytics() {
   const max = Math.max(...spend.map((s) => s.value));
 
   return (
-    <section id="analytics" className="py-20">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+    <section id="usage" className="py-20 sm:py-28">
+      <div className="mx-auto max-w-content px-5 sm:px-8">
         <SectionHeading
-          eyebrow="Analytics"
-          title="See every dollar and token"
-          subtitle="Spend by day and model, request counts, and latency — all in one dashboard."
+          eyebrow="Usage"
+          title="Every token, accounted for"
+          subtitle="Spend by day and model, request volume, and overhead — one dashboard, updated live."
         />
 
-        <div className="mt-12 overflow-hidden rounded-3xl hairline card-gradient p-6 sm:p-8">
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+        <div className="surface mt-14 overflow-hidden rounded-3xl p-6 sm:p-8">
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
             {kpis.map((k) => (
-              <div key={k.label} className="rounded-2xl bg-white/[0.03] p-4">
+              <div key={k.label} className="surface-quiet rounded-2xl p-4">
                 <p className="text-xs text-ink-faint">{k.label}</p>
-                <p className="mt-1 text-2xl font-semibold text-ink">
+                <p className="mt-1 text-xl font-semibold text-ink sm:text-2xl">
                   {k.value}
                 </p>
               </div>
             ))}
           </div>
 
-          <div className="mt-8 grid gap-8 lg:grid-cols-[1.4fr_1fr]">
+          <div className="mt-8 grid gap-10 lg:grid-cols-[1.4fr_1fr]">
             {/* Spend by day */}
             <div>
               <p className="text-sm text-ink-muted">Spend by day</p>
-              <div className="mt-5 flex h-44 items-end gap-3">
+              <div className="mt-5 flex h-44 items-end gap-2 sm:gap-3">
                 {spend.map((s) => (
                   <div
                     key={s.day}
@@ -60,7 +60,7 @@ export function Analytics() {
                   >
                     <div className="flex w-full flex-1 items-end">
                       <div
-                        className="w-full rounded-t-md bg-gradient-to-t from-violet-deep to-violet-soft transition-all"
+                        className="w-full rounded-t-md bg-gradient-to-t from-violet-deep/70 to-violet-soft"
                         style={{ height: `${(s.value / max) * 100}%` }}
                         title={`$${s.value}`}
                       />
@@ -83,9 +83,9 @@ export function Analytics() {
                       </span>
                       <span className="text-ink">{m.pct}%</span>
                     </div>
-                    <div className="mt-1.5 h-2 overflow-hidden rounded-full bg-white/5">
+                    <div className="mt-1.5 h-2 overflow-hidden rounded-full bg-white/[0.06]">
                       <div
-                        className="h-full rounded-full bg-violet"
+                        className="h-full rounded-full bg-violet-soft"
                         style={{ width: `${m.pct}%` }}
                       />
                     </div>
