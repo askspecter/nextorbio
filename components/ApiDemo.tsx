@@ -6,13 +6,13 @@ import { SectionHeading } from "./Section";
 const snippet = `import OpenAI from "openai";
 
 const client = new OpenAI({
-  baseURL: "https://api.orbio.so/v1",   // ← 1. point here
-  apiKey: process.env.ORBIO_API_KEY,    // ← 2. your Orbio key
+  baseURL: "https://api.halva.so/v1",   // ← 1. point here
+  apiKey: process.env.HALVA_API_KEY,    // ← 2. your Halva key
 });
 
 const res = await client.chat.completions.create({
   model: "anthropic/claude-fable-5.1",
-  messages: [{ role: "user", content: "Hello, Orbio!" }],
+  messages: [{ role: "user", content: "Hello, Halva!" }],
 });
 
 console.log(res.choices[0].message.content);`;
@@ -57,7 +57,7 @@ export function ApiDemo() {
             </h2>
             <p className="mt-4 text-ink-muted">
               Keep your existing SDK, request shape, streaming, and tool calls.
-              Point the base URL at Orbio, drop in your key, and every model is
+              Point the base URL at Halva, drop in your key, and every model is
               available through one endpoint.
             </p>
             <ul className="mt-6 space-y-3 text-sm text-ink-muted">

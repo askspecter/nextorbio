@@ -1,12 +1,12 @@
-# Orbio — AI Credits at a Discount
+# Halva — AI Credits at a Discount
 
 A fully functional AI credit marketplace built with **Next.js (App Router)**,
-**TypeScript**, and **Tailwind CSS**, modeled on
-[orbio.so](https://www.orbio.so/).
+**TypeScript**, and **Tailwind CSS**. (Design inspired by
+[orbio.so](https://www.orbio.so/).)
 
-Orbio is an AI credit marketplace: buy **CREDIT** (1 CREDIT = $1 of AI usage)
+Halva is an AI credit marketplace: buy **CREDIT** (1 CREDIT = $1 of AI usage)
 at a discount and spend it across 400+ models — up to 90% off list — through a
-single OpenAI-compatible key. Sellers and `$ORBIO` stakers list unused credit
+single OpenAI-compatible key. Sellers and `$HALVA` stakers list unused credit
 on an onchain order book at a discount they choose.
 
 > This is an educational demo project. All prices, models, wallets, and

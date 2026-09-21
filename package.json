@@ -1,8 +1,8 @@
 {
-  "name": "orbio",
+  "name": "halva",
   "version": "1.0.0",
   "private": true,
-  "description": "Orbio — AI credits at a discount. 400+ models, one key, up to 90% off. 1 CREDIT = $1 of AI usage.",
+  "description": "Halva — AI credits at a discount. 400+ models, one key, up to 90% off. 1 CREDIT = $1 of AI usage.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
