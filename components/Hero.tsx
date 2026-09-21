@@ -1,7 +1,7 @@
 const stats = [
-  { value: "446", label: "models, one key" },
-  { value: "<50 ms", label: "added latency" },
-  { value: "$0", label: "setup or subscription" },
+  { value: "400+", label: "models, one key" },
+  { value: "up to 90%", label: "off list price" },
+  { value: "1 CREDIT", label: "= $1 of AI usage" },
 ];
 
 const vendors = ["Anthropic", "OpenAI", "Google", "Meta", "Mistral", "xAI"];
@@ -17,19 +17,19 @@ export function Hero() {
             className="inline-flex items-center gap-2 rounded-full hairline bg-white/5 px-3 py-1 text-xs text-ink-muted transition-colors hover:text-ink"
           >
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-violet animate-pulse-soft" />
-            Introducing Halva Credit
+            Introducing CREDIT by Orbio
             <span aria-hidden="true">→</span>
           </a>
 
           <h1 className="mt-6 text-4xl font-semibold leading-[1.05] tracking-tight sm:text-6xl">
-            <span className="gradient-text">Get LLM credits,</span>
+            <span className="gradient-text">Get AI credits,</span>
             <br />
             at a discount
           </h1>
 
           <p className="mx-auto mt-6 max-w-xl text-lg text-ink-muted">
-            One key, every model, no subscriptions. Buy prepaid API credits
-            below list price and route them across every major provider.
+            400+ models, one key, up to 90% off. Buy CREDIT once and spend it
+            across every major model — 1 CREDIT = $1 of AI usage.
           </p>
 
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
@@ -37,7 +37,7 @@ export function Hero() {
               href="#buy"
               className="w-full rounded-full bg-violet px-6 py-3 text-sm font-medium text-white shadow-lg shadow-violet/25 transition-transform hover:scale-[1.03] sm:w-auto"
             >
-              Buy credits
+              Get credits
             </a>
             <a
               href="#migrate"

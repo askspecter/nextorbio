@@ -1,12 +1,13 @@
-# Halva — AI Credit Marketplace
+# Orbio — AI Credits at a Discount
 
 A fully functional AI credit marketplace built with **Next.js (App Router)**,
-**TypeScript**, and **Tailwind CSS**. (Design inspired by
-[orbio.so](https://www.orbio.so/).)
+**TypeScript**, and **Tailwind CSS**, modeled on
+[orbio.so](https://www.orbio.so/).
 
-Halva is an AI credit marketplace: buy prepaid LLM API credits below list
-price and route them across every major provider through a single
-OpenAI-compatible key.
+Orbio is an AI credit marketplace: buy **CREDIT** (1 CREDIT = $1 of AI usage)
+at a discount and spend it across 400+ models — up to 90% off list — through a
+single OpenAI-compatible key. Sellers and `$ORBIO` stakers list unused credit
+on an onchain order book at a discount they choose.
 
 > This is an educational demo project. All prices, models, wallets, and
 > transactions shown are illustrative.
@@ -19,9 +20,9 @@ Every interactive element actually works:
   amount and see credits, savings, and effective discount update in real time.
   It calls a real backend endpoint (`POST /api/quote`) and falls back to an
   instant local estimate.
-- **Cheapest-tier-first order filling** (`lib/data.ts` → `fillOrder`) — orders
-  fill against the liquidity book starting from the biggest discount, spilling
-  into the next tier when one is exhausted.
+- **Deepest-discount-first order filling** (`lib/data.ts` → `fillOrder`) —
+  orders fill against the onchain order book starting from the biggest
+  discount, spilling into the next tier when one is exhausted.
 - **Live liquidity feed** (`components/LiquidityBook.tsx`) — a simulated
   "Recent buys" ticker that ages and prepends transactions.
 - **Copy-to-clipboard API snippet** (`components/ApiDemo.tsx`) with syntax
