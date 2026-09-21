@@ -14,7 +14,7 @@ export function CtaFooter() {
                 Start spending less on every token
               </h2>
               <p className="mx-auto mt-4 max-w-md text-ink-muted">
-                One key, every model, no subscriptions. Buy your first credits in
+                400+ models, one key, up to 90% off. Get your first CREDIT in
                 under a minute.
               </p>
               <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
@@ -22,7 +22,7 @@ export function CtaFooter() {
                   href="#buy"
                   className="w-full rounded-full bg-violet px-6 py-3 text-sm font-medium text-white shadow-lg shadow-violet/25 transition-transform hover:scale-[1.03] sm:w-auto"
                 >
-                  Buy credits
+                  Get credits
                 </a>
                 <a
                   href="#migrate"
@@ -43,8 +43,8 @@ export function CtaFooter() {
             <div className="max-w-xs">
               <Logo />
               <p className="mt-4 text-sm text-ink-muted">
-                The AI credit marketplace. Discounted access to every major LLM
-                through one OpenAI-compatible key.
+                AI credits at a discount. 400+ models through one
+                OpenAI-compatible key. 1 CREDIT = $1 of AI usage.
               </p>
             </div>
 
@@ -81,7 +81,7 @@ export function CtaFooter() {
                   </li>
                   <li>
                     <a
-                      href="mailto:hello@halva.example"
+                      href="mailto:hello@orbio.so"
                       className="text-ink-muted transition-colors hover:text-ink"
                     >
                       Contact
@@ -96,12 +96,12 @@ export function CtaFooter() {
                 <ul className="mt-4 space-y-2 text-sm">
                   <li>
                     <a
-                      href="https://twitter.com"
+                      href="https://x.com/orbiodotso"
                       target="_blank"
                       rel="noreferrer"
                       className="text-ink-muted transition-colors hover:text-ink"
                     >
-                      @halvadotso
+                      @orbiodotso
                     </a>
                   </li>
                 </ul>
@@ -111,12 +111,12 @@ export function CtaFooter() {
 
           <div className="mt-10 border-t border-white/5 pt-6">
             <p className="text-xs leading-relaxed text-ink-faint">
-              Credits are a promotional grant of product access, not an
-              investment return, and not redeemable for cash. Model names and
-              prices shown are illustrative.
+              CREDIT is a unit of prepaid product access, not an investment
+              return, and not redeemable for cash. Model names, prices, and
+              on-chain figures shown are illustrative.
             </p>
             <p className="mt-4 text-xs text-ink-faint">
-              © {new Date().getFullYear()} Halva. A demo project for
+              © {new Date().getFullYear()} Orbio. A demo project for
               educational purposes.
             </p>
           </div>

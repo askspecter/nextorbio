@@ -30,7 +30,7 @@ export function LiquidityBook() {
       setBuys((prev) => {
         const aged = prev.map((b) => ({ ...b, secondsAgo: b.secondsAgo + 3 }));
         if (Math.random() > 0.55) {
-          const discount = Math.random() > 0.5 ? 10 : 5;
+          const discount = [90, 60, 30][Math.floor(Math.random() * 3)];
           const amount = [40, 120, 250, 500, 900, 2000][
             Math.floor(Math.random() * 6)
           ];
@@ -56,9 +56,9 @@ export function LiquidityBook() {
     <section id="liquidity" className="py-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading
-          eyebrow="Liquidity book"
-          title="Discounted credit, in real time"
-          subtitle="Token holders list allocations; buyers fill against them. Here's the live book."
+          eyebrow="Sell · onchain order book"
+          title="Sell the credit you're not using"
+          subtitle="Sellers and $ORBIO stakers list CREDIT at a discount they choose; buyers fill against them. Here's the live book."
         />
 
         <div className="mt-12 grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
