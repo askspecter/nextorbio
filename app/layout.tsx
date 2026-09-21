@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://orbio.so"),
-  title: "Orbio · AI credits at a discount",
+  metadataBase: new URL("https://halva.so"),
+  title: "Halva · AI credits at a discount",
   description:
-    "Get AI credits at a discount. 400+ models, one key, up to 90% off. Buy CREDIT once and spend it across every major model through a single Orbio key.",
+    "Get AI credits at a discount. 400+ models, one key, up to 90% off. Buy CREDIT once and spend it across every major model through a single Halva key.",
   keywords: [
     "AI credits",
     "CREDIT token",
-    "ORBIO",
+    "HALVA",
     "LLM API",
     "OpenRouter alternative",
     "discounted API",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     "Gemini",
   ],
   openGraph: {
-    title: "Orbio · AI credits at a discount",
+    title: "Halva · AI credits at a discount",
     description:
       "400+ models, one key, up to 90% off. 1 CREDIT = $1 of AI usage.",
     type: "website",

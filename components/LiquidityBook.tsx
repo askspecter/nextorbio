@@ -58,7 +58,7 @@ export function LiquidityBook() {
         <SectionHeading
           eyebrow="Sell · onchain order book"
           title="Sell the credit you're not using"
-          subtitle="Sellers and $ORBIO stakers list CREDIT at a discount they choose; buyers fill against them. Here's the live book."
+          subtitle="Sellers and $HALVA stakers list CREDIT at a discount they choose; buyers fill against them. Here's the live book."
         />
 
         <div className="mt-12 grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">

@@ -81,7 +81,7 @@ export function CtaFooter() {
                   </li>
                   <li>
                     <a
-                      href="mailto:hello@orbio.so"
+                      href="mailto:hello@halva.so"
                       className="text-ink-muted transition-colors hover:text-ink"
                     >
                       Contact
@@ -96,12 +96,12 @@ export function CtaFooter() {
                 <ul className="mt-4 space-y-2 text-sm">
                   <li>
                     <a
-                      href="https://x.com/orbiodotso"
+                      href="https://x.com/tylerbroqs"
                       target="_blank"
                       rel="noreferrer"
                       className="text-ink-muted transition-colors hover:text-ink"
                     >
-                      @orbiodotso
+                      @tylerbroqs
                     </a>
                   </li>
                 </ul>
@@ -116,7 +116,7 @@ export function CtaFooter() {
               on-chain figures shown are illustrative.
             </p>
             <p className="mt-4 text-xs text-ink-faint">
-              © {new Date().getFullYear()} Orbio. A demo project for
+              © {new Date().getFullYear()} Halva. A demo project for
               educational purposes.
             </p>
           </div>
