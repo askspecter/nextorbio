@@ -99,12 +99,12 @@ export function CtaFooter() {
                 <ul className="mt-4 space-y-2.5 text-sm">
                   <li>
                     <a
-                      href="https://x.com/tylerbroqs"
+                      href="https://x.com/halvadotsh"
                       target="_blank"
                       rel="noreferrer"
                       className="text-ink-muted transition-colors hover:text-ink"
                     >
-                      @tylerbroqs
+                      @halvadotsh
                     </a>
                   </li>
                 </ul>
