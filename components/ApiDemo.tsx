@@ -54,7 +54,7 @@ export function ApiDemo() {
             </h2>
             <p className="mt-5 text-ink-muted">
               Halva speaks the OpenAI API. Keep your SDK, request shape,
-              streaming, and tool calls exactly as they are — just point the
+              streaming, and tool calls exactly as they are. Just point the
               base URL and drop in your key.
             </p>
 

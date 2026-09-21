@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Halva · The unified AI gateway",
     description:
-      "One clean API for 400+ models — wholesale rates, full observability, zero lock-in.",
+      "One clean API for 400+ models. Wholesale rates, full observability, zero lock-in.",
     type: "website",
   },
 };

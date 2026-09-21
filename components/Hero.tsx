@@ -24,7 +24,7 @@ export function Hero() {
                 alt="Halva"
                 width={112}
                 height={112}
-                className="relative h-full w-full select-none object-contain mix-blend-screen drop-shadow-[0_0_32px_rgba(139,92,246,0.5)]"
+                className="relative h-full w-full select-none object-contain drop-shadow-[0_0_32px_rgba(139,92,246,0.5)]"
                 draggable={false}
               />
             </span>
@@ -52,7 +52,7 @@ export function Hero() {
             style={{ animationDelay: "180ms" }}
           >
             Halva routes your requests to 400+ models through a single
-            endpoint — at wholesale rates, with every token accounted for. No
+            endpoint, at wholesale rates, with every token accounted for. No
             subscriptions, no lock-in.
           </p>
 

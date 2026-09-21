@@ -4,7 +4,7 @@ import { SectionHeading } from "./Section";
 const features = [
   {
     title: "One key, every provider",
-    body: "Anthropic, OpenAI, Google, Meta, Mistral, and xAI behind a single OpenAI-compatible endpoint. Address any model as provider/model and switch freely — no new integration each time.",
+    body: "Anthropic, OpenAI, Google, Meta, Mistral, and xAI behind a single OpenAI-compatible endpoint. Address any model as provider/model and switch freely, with no new integration each time.",
     icon: (
       <>
         <rect
@@ -27,7 +27,7 @@ const features = [
   },
   {
     title: "Wholesale rates, live",
-    body: "A router prices every request at the best available rate for the model you asked for. Blended pricing improves with volume — no markup, no minimums, no seat fees.",
+    body: "A router prices every request at the best available rate for the model you asked for. Blended pricing improves with volume. No markup, no minimums, no seat fees.",
     icon: (
       <>
         <path
@@ -72,7 +72,7 @@ export function Product() {
         <SectionHeading
           eyebrow="Product"
           title="Infrastructure, not a middleman"
-          subtitle="A thin, fast layer between your code and every model — built to disappear."
+          subtitle="A thin, fast layer between your code and every model, built to disappear."
         />
 
         <div className="mt-14 grid gap-5 md:grid-cols-3">

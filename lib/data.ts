@@ -8,8 +8,8 @@ export type Band = {
   available: number; // monthly USD of usage priced at this band
 };
 
-// Volume pricing bands. The blended rate improves as usage grows — the router
-// prices each request across bands, best rate first.
+// Volume pricing bands. The blended rate improves as usage grows, and the
+// router prices each request across bands, best rate first.
 export const bands: Band[] = [
   { label: "Scale", discount: 45, available: 2000 },
   { label: "Growth", discount: 30, available: 8000 },
@@ -38,11 +38,11 @@ export type Faq = { q: string; a: string };
 export const faqs: Faq[] = [
   {
     q: "What is Halva?",
-    a: "Halva is a single API gateway to 400+ AI models. One key, one endpoint, wholesale pricing, and full visibility into every token you spend — so you can build against any model without wiring up a new provider each time.",
+    a: "Halva is a single API gateway to 400+ AI models. One key, one endpoint, wholesale pricing, and full visibility into every token you spend, so you can build against any model without wiring up a new provider each time.",
   },
   {
     q: "How is it cheaper than going direct?",
-    a: "Halva aggregates demand and routes across providers, passing near-cost rates back to you. You pay per token at a blended market rate that improves with volume — no monthly minimum, no seat fees, no markup on top.",
+    a: "Halva aggregates demand and routes across providers, passing near-cost rates back to you. You pay per token at a blended market rate that improves with volume. No monthly minimum, no seat fees, no markup on top.",
   },
   {
     q: "Is it really drop-in?",
@@ -50,7 +50,7 @@ export const faqs: Faq[] = [
   },
   {
     q: "Do you train on or store my data?",
-    a: "Never. Requests relay straight through to the provider you named. We keep only billing metadata — model, token counts, and timestamps — and nothing of your prompt or completion content is written to disk.",
+    a: "Never. Requests relay straight through to the provider you named. We keep only billing metadata (model, token counts, and timestamps), and nothing of your prompt or completion content is written to disk.",
   },
   {
     q: "What happens if a provider has an outage?",
