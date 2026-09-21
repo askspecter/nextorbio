@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+    monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #07060c;
+  color: #f4f2fb;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Ambient orb glow used across hero + section backgrounds */
+.orb-glow {
+  background: radial-gradient(
+    600px circle at 50% 0%,
+    rgba(139, 92, 246, 0.25),
+    rgba(139, 92, 246, 0) 60%
+  );
+}
+
+.card-gradient {
+  background: linear-gradient(180deg, #16122a 0%, #0f0c1d 100%);
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #f4f2fb 0%, #a78bfa 55%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hairline {
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Thin scrollbar for code + table panels */
+.thin-scroll::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+.thin-scroll::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.35);
+  border-radius: 999px;
+}
+.thin-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-fade-up,
+  .animate-marquee,
+  .animate-pulse-soft {
+    animation: none !important;
+  }
+}
