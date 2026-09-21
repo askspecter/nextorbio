@@ -45,7 +45,7 @@ export function BuyCredits() {
         <SectionHeading
           eyebrow="Estimate"
           title="See what you'd pay"
-          subtitle="Your monthly usage is priced across volume bands automatically — the blended rate improves as you scale. Drag to preview it."
+          subtitle="Your monthly usage is priced across volume bands automatically, and the blended rate improves as you scale. Drag to preview it."
         />
 
         <div className="mx-auto mt-14 grid max-w-4xl gap-5 lg:grid-cols-[1.1fr_0.9fr]">

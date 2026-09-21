@@ -61,7 +61,7 @@ export function Pricing() {
           </div>
         </div>
         <p className="mt-4 text-center text-xs text-ink-faint">
-          $ per 1M output tokens. Illustrative rates — live pricing tracks the
+          $ per 1M output tokens. Illustrative rates. Live pricing tracks the
           market and your volume band.
         </p>
       </div>

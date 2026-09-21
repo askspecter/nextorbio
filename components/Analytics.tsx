@@ -33,7 +33,7 @@ export function Analytics() {
         <SectionHeading
           eyebrow="Usage"
           title="Every token, accounted for"
-          subtitle="Spend by day and model, request volume, and overhead — one dashboard, updated live."
+          subtitle="Spend by day and model, request volume, and overhead. One dashboard, updated live."
         />
 
         <div className="surface mt-14 overflow-hidden rounded-3xl p-6 sm:p-8">

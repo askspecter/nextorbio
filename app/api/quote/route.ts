@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { fillOrder, bands } from "@/lib/data";
 
 // POST /api/quote  { amount: number }
-// Prices a month of usage across Halva's volume bands — the same logic the
+// Prices a month of usage across Halva's volume bands, the same logic the
 // on-page estimator uses, exposed as a real endpoint.
 export async function POST(request: Request) {
   let amount = 0;

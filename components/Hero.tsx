@@ -52,7 +52,7 @@ export function Hero() {
             style={{ animationDelay: "180ms" }}
           >
             Halva routes your requests to 400+ models through a single
-            endpoint — at wholesale rates, with every token accounted for. No
+            endpoint, at wholesale rates, with every token accounted for. No
             subscriptions, no lock-in.
           </p>
 

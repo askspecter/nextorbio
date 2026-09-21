@@ -46,8 +46,8 @@ export function CtaFooter() {
             <div className="max-w-xs">
               <Logo />
               <p className="mt-4 text-sm leading-relaxed text-ink-muted">
-                The unified AI gateway. One clean API in front of 400+ models —
-                wholesale rates, full observability, zero lock-in.
+                The unified AI gateway. One clean API in front of 400+ models,
+                with wholesale rates, full observability, and zero lock-in.
               </p>
             </div>
 
@@ -115,7 +115,7 @@ export function CtaFooter() {
           <div className="mt-12 flex flex-col gap-3 border-t border-white/[0.06] pt-6 sm:flex-row sm:items-center sm:justify-between">
             <p className="text-xs text-ink-faint">
               © {new Date().getFullYear()} Halva. A demo project for educational
-              purposes — model names and prices are illustrative.
+              purposes. Model names and prices are illustrative.
             </p>
             <p className="text-xs text-ink-faint">Built for developers.</p>
           </div>
