@@ -1,8 +1,8 @@
 {
-  "name": "nextorbio",
+  "name": "halva",
   "version": "1.0.0",
   "private": true,
-  "description": "Orbio — AI credit marketplace. Get LLM credits at a discount, one key for every model.",
+  "description": "Halva — AI credit marketplace. Get LLM credits at a discount, one key for every model.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

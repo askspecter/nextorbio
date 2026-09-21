@@ -17,7 +17,7 @@ export function Hero() {
             className="inline-flex items-center gap-2 rounded-full hairline bg-white/5 px-3 py-1 text-xs text-ink-muted transition-colors hover:text-ink"
           >
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-violet animate-pulse-soft" />
-            Introducing Orbio Credit
+            Introducing Halva Credit
             <span aria-hidden="true">→</span>
           </a>
 

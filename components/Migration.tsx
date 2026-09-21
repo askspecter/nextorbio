@@ -4,12 +4,12 @@ const steps = [
   {
     n: "01",
     title: "Swap the base URL",
-    body: "Replace https://openrouter.ai/api/v1 with https://api.orbio.so/v1.",
+    body: "Replace https://openrouter.ai/api/v1 with https://api.halva.so/v1.",
   },
   {
     n: "02",
     title: "Swap the key",
-    body: "Use your Orbio API key in place of your existing provider key.",
+    body: "Use your Halva API key in place of your existing provider key.",
   },
   {
     n: "03",
@@ -48,7 +48,7 @@ export function Migration() {
           </p>
           <p className="mt-2 text-ink-faint"># after</p>
           <p className="text-green-300/80">
-            + baseURL: <span className="text-emerald-300/80">"https://api.orbio.so/v1"</span>
+            + baseURL: <span className="text-emerald-300/80">"https://api.halva.so/v1"</span>
           </p>
         </div>
       </div>

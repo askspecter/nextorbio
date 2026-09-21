@@ -15,7 +15,7 @@ export function Pricing() {
         <SectionHeading
           eyebrow="Pricing"
           title="Same models, lower price"
-          subtitle="List price versus Orbio price per 1M output tokens. No markup, no minimums."
+          subtitle="List price versus Halva price per 1M output tokens. No markup, no minimums."
         />
 
         <div className="mx-auto mt-12 max-w-3xl overflow-hidden rounded-2xl hairline card-gradient">
@@ -25,13 +25,13 @@ export function Pricing() {
                 <th className="px-5 py-4 font-medium">Model</th>
                 <th className="px-5 py-4 font-medium">Provider</th>
                 <th className="px-5 py-4 text-right font-medium">List</th>
-                <th className="px-5 py-4 text-right font-medium">Orbio</th>
+                <th className="px-5 py-4 text-right font-medium">Halva</th>
                 <th className="px-5 py-4 text-right font-medium">Save</th>
               </tr>
             </thead>
             <tbody>
               {modelPrices.map((m) => {
-                const save = ((m.list - m.orbio) / m.list) * 100;
+                const save = ((m.list - m.halva) / m.list) * 100;
                 return (
                   <tr
                     key={m.model}
@@ -45,7 +45,7 @@ export function Pricing() {
                       {usd(m.list)}
                     </td>
                     <td className="px-5 py-4 text-right font-medium text-ink">
-                      {usd(m.orbio)}
+                      {usd(m.halva)}
                     </td>
                     <td className="px-5 py-4 text-right">
                       <span className="rounded-full bg-violet/10 px-2 py-0.5 text-xs font-medium text-violet-soft">

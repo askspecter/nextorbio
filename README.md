@@ -1,14 +1,15 @@
-# Orbio — AI Credit Marketplace
+# Halva — AI Credit Marketplace
 
-A fully functional recreation of [orbio.so](https://www.orbio.so/) built with
-**Next.js (App Router)**, **TypeScript**, and **Tailwind CSS**.
+A fully functional AI credit marketplace built with **Next.js (App Router)**,
+**TypeScript**, and **Tailwind CSS**. (Design inspired by
+[orbio.so](https://www.orbio.so/).)
 
-Orbio is an AI credit marketplace: buy prepaid LLM API credits below list
+Halva is an AI credit marketplace: buy prepaid LLM API credits below list
 price and route them across every major provider through a single
 OpenAI-compatible key.
 
-> This is an educational demo recreation. All prices, models, wallets, and
-> transactions shown are illustrative. It is not affiliated with Orbio.
+> This is an educational demo project. All prices, models, wallets, and
+> transactions shown are illustrative.
 
 ## Features
 

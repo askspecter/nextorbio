@@ -81,7 +81,7 @@ export function CtaFooter() {
                   </li>
                   <li>
                     <a
-                      href="mailto:hello@orbio.example"
+                      href="mailto:hello@halva.example"
                       className="text-ink-muted transition-colors hover:text-ink"
                     >
                       Contact
@@ -101,7 +101,7 @@ export function CtaFooter() {
                       rel="noreferrer"
                       className="text-ink-muted transition-colors hover:text-ink"
                     >
-                      @orbiodotso
+                      @halvadotso
                     </a>
                   </li>
                 </ul>
@@ -116,7 +116,7 @@ export function CtaFooter() {
               prices shown are illustrative.
             </p>
             <p className="mt-4 text-xs text-ink-faint">
-              © {new Date().getFullYear()} Orbio. A demo recreation for
+              © {new Date().getFullYear()} Halva. A demo project for
               educational purposes.
             </p>
           </div>

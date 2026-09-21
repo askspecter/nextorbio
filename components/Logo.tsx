@@ -29,7 +29,7 @@ export function Logo({ className = "" }: { className?: string }) {
           />
         </svg>
       </span>
-      <span className="text-lg font-semibold tracking-tight">Orbio</span>
+      <span className="text-lg font-semibold tracking-tight">Halva</span>
     </a>
   );
 }

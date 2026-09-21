@@ -1,4 +1,4 @@
-// Static data that powers the Orbio landing page.
+// Static data that powers the Halva landing page.
 // Numbers are illustrative of the product's marketplace mechanics.
 
 export type Tier = {
@@ -18,27 +18,27 @@ export type ModelPrice = {
   model: string;
   vendor: "Anthropic" | "OpenAI" | "Google";
   list: number; // $ per 1M output tokens
-  orbio: number; // $ per 1M output tokens after discount
+  halva: number; // $ per 1M output tokens after discount
 };
 
 export const modelPrices: ModelPrice[] = [
-  { model: "Claude Fable 5.1", vendor: "Anthropic", list: 50, orbio: 45 },
-  { model: "Claude Opus 5", vendor: "Anthropic", list: 75, orbio: 67.5 },
-  { model: "GPT-5.1", vendor: "OpenAI", list: 40, orbio: 36 },
-  { model: "GPT-5 mini", vendor: "OpenAI", list: 8, orbio: 7.2 },
-  { model: "Gemini 3 Pro", vendor: "Google", list: 30, orbio: 27 },
+  { model: "Claude Fable 5.1", vendor: "Anthropic", list: 50, halva: 45 },
+  { model: "Claude Opus 5", vendor: "Anthropic", list: 75, halva: 67.5 },
+  { model: "GPT-5.1", vendor: "OpenAI", list: 40, halva: 36 },
+  { model: "GPT-5 mini", vendor: "OpenAI", list: 8, halva: 7.2 },
+  { model: "Gemini 3 Pro", vendor: "Google", list: 30, halva: 27 },
 ];
 
 export type Faq = { q: string; a: string };
 
 export const faqs: Faq[] = [
   {
-    q: "What exactly is an Orbio credit?",
+    q: "What exactly is a Halva credit?",
     a: "A credit is a prepaid unit of LLM API access. You buy credits once, then spend them across 446 models through a single OpenAI-compatible key. Credits are a promotional grant of product access — not an investment return, and not redeemable for cash.",
   },
   {
     q: "Where does the discount come from?",
-    a: "ORBIO token holders list unused credit allocations in the liquidity book at a discount. When you buy, your order fills against the cheapest available tier first, so you always get the best live price without haggling.",
+    a: "HALVA token holders list unused credit allocations in the liquidity book at a discount. When you buy, your order fills against the cheapest available tier first, so you always get the best live price without haggling.",
   },
   {
     q: "Do you store my prompts?",
@@ -50,7 +50,7 @@ export const faqs: Faq[] = [
   },
   {
     q: "How do I switch from OpenRouter or the OpenAI SDK?",
-    a: "Change two variables: point base_url at https://api.orbio.so/v1 and swap in your Orbio key. Everything else — request shape, streaming, tool calls — stays identical.",
+    a: "Change two variables: point base_url at https://api.halva.so/v1 and swap in your Halva key. Everything else — request shape, streaming, tool calls — stays identical.",
   },
   {
     q: "Can I get a refund?",
