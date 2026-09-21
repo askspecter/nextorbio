@@ -6,7 +6,7 @@ const stats = [
 
 export function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden pt-36 sm:pt-44">
+    <section id="top" className="relative overflow-hidden pt-44 sm:pt-56">
       {/* soft key light behind the mark */}
       <div
         aria-hidden="true"
@@ -15,21 +15,6 @@ export function Hero() {
 
       <div className="relative mx-auto max-w-content px-5 sm:px-8">
         <div className="mx-auto max-w-3xl text-center">
-          <div className="rise mx-auto mb-10 flex justify-center">
-            <span className="relative inline-flex h-24 w-24 items-center justify-center sm:h-28 sm:w-28">
-              <span className="absolute inset-0 rounded-full bg-violet/25 blur-2xl" />
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/halva-logo.png"
-                alt="Halva"
-                width={112}
-                height={112}
-                className="relative h-full w-full select-none object-contain drop-shadow-[0_0_32px_rgba(139,92,246,0.5)]"
-                draggable={false}
-              />
-            </span>
-          </div>
-
           <div
             className="rise inline-flex items-center gap-2 rounded-full hairline bg-white/[0.04] px-3.5 py-1.5 text-xs text-ink-muted"
             style={{ animationDelay: "60ms" }}
