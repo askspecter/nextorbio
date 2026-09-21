@@ -3,24 +3,24 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://halva.so"),
-  title: "Halva · AI credits at a discount",
+  title: "Halva · The unified AI gateway",
   description:
-    "Get AI credits at a discount. 400+ models, one key, up to 90% off. Buy CREDIT once and spend it across every major model through a single Halva key.",
+    "One clean API for 400+ models. Halva routes every request through a single endpoint at wholesale rates, with every token accounted for. No subscriptions, no lock-in.",
   keywords: [
-    "AI credits",
-    "CREDIT token",
-    "HALVA",
+    "AI gateway",
     "LLM API",
-    "OpenRouter alternative",
-    "discounted API",
-    "Claude Fable",
-    "GPT Astra",
+    "unified API",
+    "model router",
+    "OpenAI compatible",
+    "wholesale AI pricing",
+    "Claude",
+    "GPT",
     "Gemini",
   ],
   openGraph: {
-    title: "Halva · AI credits at a discount",
+    title: "Halva · The unified AI gateway",
     description:
-      "400+ models, one key, up to 90% off. 1 CREDIT = $1 of AI usage.",
+      "One clean API for 400+ models — wholesale rates, full observability, zero lock-in.",
     type: "website",
   },
 };
@@ -32,7 +32,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="font-sans antialiased">
+      <body className="grain font-sans antialiased">
         <div className="site-bg" aria-hidden="true" />
         {children}
       </body>

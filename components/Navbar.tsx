@@ -18,15 +18,13 @@ export function Navbar() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
-        scrolled
-          ? "border-b border-white/5 bg-bg/80 backdrop-blur-xl"
-          : "border-b border-transparent"
+        scrolled ? "border-b border-white/[0.06] bg-bg/70 backdrop-blur-xl" : ""
       }`}
     >
-      <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
+      <nav className="mx-auto flex h-16 max-w-content items-center justify-between px-5 sm:px-8">
         <Logo />
 
-        <div className="hidden items-center gap-8 md:flex">
+        <div className="hidden items-center gap-9 md:flex">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -38,18 +36,18 @@ export function Navbar() {
           ))}
         </div>
 
-        <div className="hidden items-center gap-3 md:flex">
+        <div className="hidden items-center gap-4 md:flex">
           <a
-            href="#analytics"
+            href="#usage"
             className="text-sm text-ink-muted transition-colors hover:text-ink"
           >
             Sign in
           </a>
           <a
-            href="#buy"
-            className="rounded-full bg-violet px-4 py-2 text-sm font-medium text-white shadow-lg shadow-violet/25 transition-transform hover:scale-[1.03]"
+            href="#api"
+            className="rounded-full bg-white px-4 py-2 text-sm font-medium text-black transition-opacity hover:opacity-90"
           >
-            Buy credits
+            Start building
           </a>
         </div>
 
@@ -81,7 +79,7 @@ export function Navbar() {
       </nav>
 
       {open && (
-        <div className="border-t border-white/5 bg-bg/95 px-4 py-4 backdrop-blur-xl md:hidden">
+        <div className="border-t border-white/[0.06] bg-bg/95 px-5 py-4 backdrop-blur-xl md:hidden">
           <div className="flex flex-col gap-1">
             {navLinks.map((link) => (
               <a
@@ -94,11 +92,11 @@ export function Navbar() {
               </a>
             ))}
             <a
-              href="#buy"
+              href="#api"
               onClick={() => setOpen(false)}
-              className="mt-2 rounded-full bg-violet px-4 py-2.5 text-center text-sm font-medium text-white"
+              className="mt-2 rounded-full bg-white px-4 py-2.5 text-center text-sm font-medium text-black"
             >
-              Buy credits
+              Start building
             </a>
           </div>
         </div>

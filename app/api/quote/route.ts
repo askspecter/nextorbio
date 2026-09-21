@@ -1,9 +1,9 @@
 import { NextResponse } from "next/server";
-import { fillOrder, tiers } from "@/lib/data";
+import { fillOrder, bands } from "@/lib/data";
 
 // POST /api/quote  { amount: number }
-// Returns a live fill against the liquidity book — the same logic the
-// on-page calculator uses, exposed as a real endpoint.
+// Prices a month of usage across Halva's volume bands — the same logic the
+// on-page estimator uses, exposed as a real endpoint.
 export async function POST(request: Request) {
   let amount = 0;
   try {
@@ -29,7 +29,7 @@ export async function POST(request: Request) {
   return NextResponse.json({
     input: clamped,
     ...quote,
-    tiers,
+    bands,
     currency: "USD",
     generatedAt: new Date().toISOString(),
   });
@@ -37,7 +37,7 @@ export async function POST(request: Request) {
 
 export async function GET() {
   return NextResponse.json({
-    message: "POST { amount } to receive a live credit quote.",
-    tiers,
+    message: "POST { amount } to price a month of usage across Halva's bands.",
+    bands,
   });
 }

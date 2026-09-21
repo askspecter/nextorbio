@@ -1,96 +1,98 @@
 const stats = [
-  { value: "400+", label: "models, one key" },
-  { value: "up to 90%", label: "off list price" },
-  { value: "1 CREDIT", label: "= $1 of AI usage" },
+  { value: "400+", label: "models" },
+  { value: "~40ms", label: "routing overhead" },
+  { value: "99.99%", label: "uptime" },
 ];
-
-const vendors = ["Anthropic", "OpenAI", "Google", "Meta", "Mistral", "xAI"];
 
 export function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden pt-32 sm:pt-40">
-      <div className="orb-glow pointer-events-none absolute inset-x-0 top-0 h-[520px]" />
-      <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
+    <section id="top" className="relative overflow-hidden pt-36 sm:pt-44">
+      {/* soft key light behind the mark */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute left-1/2 top-24 h-[440px] w-[720px] -translate-x-1/2 rounded-full bg-violet/20 blur-[120px]"
+      />
+
+      <div className="relative mx-auto max-w-content px-5 sm:px-8">
         <div className="mx-auto max-w-3xl text-center">
-          <div className="mx-auto mb-8 flex justify-center">
+          <div className="rise mx-auto mb-10 flex justify-center">
             <span className="relative inline-flex h-24 w-24 items-center justify-center sm:h-28 sm:w-28">
-              <span className="absolute inset-0 rounded-full bg-violet/30 blur-2xl" />
+              <span className="absolute inset-0 rounded-full bg-violet/25 blur-2xl" />
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/halva-logo.png"
                 alt="Halva"
                 width={112}
                 height={112}
-                className="relative h-full w-full select-none object-contain mix-blend-screen drop-shadow-[0_0_28px_rgba(139,92,246,0.55)]"
+                className="relative h-full w-full select-none object-contain mix-blend-screen drop-shadow-[0_0_32px_rgba(139,92,246,0.5)]"
                 draggable={false}
               />
             </span>
           </div>
-          <a
-            href="#buy"
-            className="inline-flex items-center gap-2 rounded-full hairline bg-white/5 px-3 py-1 text-xs text-ink-muted transition-colors hover:text-ink"
-          >
-            <span className="inline-block h-1.5 w-1.5 rounded-full bg-violet animate-pulse-soft" />
-            Introducing CREDIT by Halva
-            <span aria-hidden="true">→</span>
-          </a>
 
-          <h1 className="mt-6 text-4xl font-semibold leading-[1.05] tracking-tight sm:text-6xl">
-            <span className="gradient-text">Get AI credits,</span>
+          <div
+            className="rise inline-flex items-center gap-2 rounded-full hairline bg-white/[0.04] px-3.5 py-1.5 text-xs text-ink-muted"
+            style={{ animationDelay: "60ms" }}
+          >
+            <span className="inline-block h-1.5 w-1.5 rounded-full bg-violet" />
+            The unified AI gateway · now in public beta
+          </div>
+
+          <h1
+            className="rise mt-7 text-[2.6rem] font-semibold leading-[1.03] tracking-tightest sm:text-[4.25rem]"
+            style={{ animationDelay: "120ms" }}
+          >
+            <span className="text-gradient">Every model.</span>
             <br />
-            at a discount
+            One clean API.
           </h1>
 
-          <p className="mx-auto mt-6 max-w-xl text-lg text-ink-muted">
-            400+ models, one key, up to 90% off. Buy CREDIT once and spend it
-            across every major model — 1 CREDIT = $1 of AI usage.
+          <p
+            className="rise mx-auto mt-6 max-w-xl text-lg leading-relaxed text-ink-muted"
+            style={{ animationDelay: "180ms" }}
+          >
+            Halva routes your requests to 400+ models through a single
+            endpoint — at wholesale rates, with every token accounted for. No
+            subscriptions, no lock-in.
           </p>
 
-          <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <div
+            className="rise mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row"
+            style={{ animationDelay: "240ms" }}
+          >
             <a
-              href="#buy"
-              className="w-full rounded-full bg-violet px-6 py-3 text-sm font-medium text-white shadow-lg shadow-violet/25 transition-transform hover:scale-[1.03] sm:w-auto"
+              href="#api"
+              className="w-full rounded-full bg-white px-6 py-3 text-sm font-medium text-black transition-transform hover:scale-[1.02] sm:w-auto"
             >
-              Get credits
+              Start building
             </a>
             <a
-              href="#migrate"
-              className="w-full rounded-full hairline bg-white/5 px-6 py-3 text-sm font-medium text-ink transition-colors hover:bg-white/10 sm:w-auto"
+              href="#pricing"
+              className="w-full rounded-full hairline bg-white/[0.04] px-6 py-3 text-sm font-medium text-ink transition-colors hover:bg-white/[0.08] sm:w-auto"
             >
-              Read the protocol
+              See pricing
             </a>
           </div>
         </div>
 
-        <dl className="mx-auto mt-14 grid max-w-2xl grid-cols-1 gap-4 sm:grid-cols-3">
+        <dl
+          className="rise mx-auto mt-16 grid max-w-2xl grid-cols-3 gap-3 sm:gap-4"
+          style={{ animationDelay: "320ms" }}
+        >
           {stats.map((s) => (
             <div
               key={s.label}
-              className="card-gradient rounded-2xl hairline px-6 py-5 text-center"
+              className="surface rounded-2xl px-3 py-5 text-center sm:px-6"
             >
-              <dt className="text-2xl font-semibold text-ink">{s.value}</dt>
-              <dd className="mt-1 text-sm text-ink-muted">{s.label}</dd>
+              <dt className="text-xl font-semibold text-ink sm:text-2xl">
+                {s.value}
+              </dt>
+              <dd className="mt-1 text-xs text-ink-muted sm:text-sm">
+                {s.label}
+              </dd>
             </div>
           ))}
         </dl>
-
-        <div className="mt-14 overflow-hidden">
-          <p className="text-center text-xs uppercase tracking-widest text-ink-faint">
-            Route to every major provider
-          </p>
-          <div className="relative mt-5 flex overflow-hidden [mask-image:linear-gradient(90deg,transparent,#000_15%,#000_85%,transparent)]">
-            <ul className="flex shrink-0 animate-marquee items-center gap-12 pr-12">
-              {[...vendors, ...vendors].map((v, i) => (
-                <li
-                  key={i}
-                  className="whitespace-nowrap text-lg font-medium text-ink-faint"
-                >
-                  {v}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
       </div>
     </section>
   );
