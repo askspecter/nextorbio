@@ -20,6 +20,40 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+/* Cinematic ambient backdrop — the orb artwork, fixed behind all content,
+   with layered dark gradients + a vignette so copy stays legible. */
+.site-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -10;
+  pointer-events: none;
+  background-image:
+    radial-gradient(120% 80% at 50% -10%, rgba(139, 92, 246, 0.18), transparent 60%),
+    linear-gradient(
+      180deg,
+      rgba(7, 6, 12, 0.62) 0%,
+      rgba(7, 6, 12, 0.82) 45%,
+      rgba(7, 6, 12, 0.95) 100%
+    ),
+    url("/halva-bg.png");
+  background-size: auto, auto, cover;
+  background-position: center, center, center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed, fixed, fixed;
+}
+
+/* Soft vignette to frame the viewport edges. */
+.site-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    130% 100% at 50% 40%,
+    transparent 55%,
+    rgba(4, 3, 8, 0.7) 100%
+  );
+}
+
 /* Ambient orb glow used across hero + section backgrounds */
 .orb-glow {
   background: radial-gradient(

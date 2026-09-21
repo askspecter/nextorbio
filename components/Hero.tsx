@@ -12,6 +12,20 @@ export function Hero() {
       <div className="orb-glow pointer-events-none absolute inset-x-0 top-0 h-[520px]" />
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
         <div className="mx-auto max-w-3xl text-center">
+          <div className="mx-auto mb-8 flex justify-center">
+            <span className="relative inline-flex h-24 w-24 items-center justify-center sm:h-28 sm:w-28">
+              <span className="absolute inset-0 rounded-full bg-violet/30 blur-2xl" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/halva-logo.png"
+                alt="Halva"
+                width={112}
+                height={112}
+                className="relative h-full w-full select-none object-contain mix-blend-screen drop-shadow-[0_0_28px_rgba(139,92,246,0.55)]"
+                draggable={false}
+              />
+            </span>
+          </div>
           <a
             href="#buy"
             className="inline-flex items-center gap-2 rounded-full hairline bg-white/5 px-3 py-1 text-xs text-ink-muted transition-colors hover:text-ink"
